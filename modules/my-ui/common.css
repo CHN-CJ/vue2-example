@@ -1,0 +1,5 @@
+/*可做组件全局的样式*/
+button {
+    border: none;
+    outline: none;
+}
