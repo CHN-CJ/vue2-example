@@ -1,6 +1,7 @@
 <template>
     <button
         :class="['my-btn', type]"
+        @click="btnClick($event)"
     >
         <slot></slot>
     </button>
@@ -11,6 +12,11 @@ export default {
     name: 'MyButton',
     props: {
         type: String
+    },
+    methods: {
+        btnClick(e) {
+            this.$emit('click', e);
+        }
     }
 }
 </script>
